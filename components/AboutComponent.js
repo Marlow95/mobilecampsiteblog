@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Card, ScrollView } from 'react-native';
-import { FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Text, ScrollView, FlatList } from 'react-native';
+import { ListItem, Card } from 'react-native-elements';
 import { PARTNERS } from '../shared/partners';
 
 
@@ -33,11 +32,13 @@ class About extends Component {
 
     render(){
         const renderPartner = ({item}) => {
-            <ListItem 
-            title={item.name}
-            subtitle={item.description}
-            leftAvatar={{source: require('./images/bootstrap-logo.png')}}
-            />
+            return (
+                <ListItem 
+                title={item.name}
+                subtitle={item.description}
+                leftAvatar={{source: require('./images/bootstrap-logo.png')}}
+                />
+            )
         }
 
         return (
