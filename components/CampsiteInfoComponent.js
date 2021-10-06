@@ -47,7 +47,7 @@ function RenderCampsite(props) {
                     color='#f50'
                     raised
                     reverse
-                    omPress={() => props.favorite ? console.log('Already set as a favorite') : props.markFavorite()}
+                    onPress={() => props.favorite ? console.log('Already set as a favorite') : props.markFavorite()}
                 />
             </Card>
         );
