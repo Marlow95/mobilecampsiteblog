@@ -16,7 +16,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     postFavorite: campsiteId => (postFavorite(campsiteId)),
-    postComment: newComment => (postComment(newComment))
+    postComment: (campsiteId, rating, author, text, date)  => (postComment(campsiteId, rating, author, text, date))
 };
 
 function RenderComments({comments}) {
@@ -161,7 +161,7 @@ class CampsiteInfo extends Component {
                             placeholder="Comment" 
                             leftIcon={{type:'font-awesome', name: 'comment-o'}} 
                             leftIconContainerStyle={{paddingRight: 10}}
-                            onChangeText={value => this.setState({comment: value})}
+                            onChangeText={value => this.setState({text: value})}
                             value={this.state.text} 
                         />
                         <View>
