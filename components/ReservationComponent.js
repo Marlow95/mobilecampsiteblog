@@ -38,7 +38,7 @@ class Reservation extends Component {
     handleReservation() {
         //console.log(JSON.stringify(this.state));
         this.alertBtn(
-            `Number of Campers: ${this.state.campers}\n Hike-In? ${this.state.hikeIn}\n Date: ${this.state.date}`)
+            <Text>{`Number of Campers: ${this.state.campers}\n Hike-In? ${this.state.hikeIn}\n Date: ${this.state.date}`}</Text>)
     }
 
     resetForm() {
